@@ -29,4 +29,6 @@ catkin build cv_bridge
 要使当前的ROS程序使用这个包的话，在`cv_bridge_python3`下，`source install/setup.bash --extend`即可。
 这个编译好的文件夹可以直接保存好，移动到其他工作空间。
 
+运行Python脚本时不要忘记使用`python3 ...`
+
 其他可能还有些问题，但还没有遇到。
