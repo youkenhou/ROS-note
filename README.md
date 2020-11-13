@@ -1,5 +1,6 @@
 # ROS-note
 ## 使ros的python功能在python3下也可以运行
+### import cv2的问题
 结合了[这个博客](https://medium.com/@beta_b0t/how-to-setup-ros-with-python-3-44a69ca36674)和[这个问题](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3),成功实现了rospy在Python3下的使用.
 首先应该已经安装好基于Python2的ROS，按照官网的wiki教程安装想要的版本即可。
 然后利用`pip3`安装ROS的Python包：
@@ -31,4 +32,6 @@ catkin build cv_bridge
 
 运行Python脚本时不要忘记使用`python3 ...`
 
+### import tf的问题
+最详细的讨论在[这里](https://github.com/ros/geometry2/issues/259)，但是用了里面的方法在ubuntu16.04与18.04下都无效，最后使用ros论坛上[这个贴子](https://answers.ros.org/question/326226/importerror-dynamic-module-does-not-define-module-export-function-pyinit__tf2/)提供的方法，在ubuntu18.04，ros melodic下成功使用python3.6 import tf。
 其他可能还有些问题，但还没有遇到。
